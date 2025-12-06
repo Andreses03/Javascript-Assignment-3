@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>OpenWeatherMap API Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- External CSS file -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Weather API Demo</h1>
+
+    <p>
+      This page connects to the
+      <strong>OpenWeatherMap Current Weather Data API</strong> using JavaScript and
+      <code>fetch()</code>.
+    </p>
+
+    <p class="docs-link">
+      Documentation followed:
+      <a href="https://openweathermap.org/current" target="_blank" rel="noopener">
+        https://openweathermap.org/current
+      </a>
+    </p>
+
+    <!-- Simple UI to search by city -->
+    <form class="search-form" id="weatherForm">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter a city (e.g. Toronto)"
+        required
+      />
+      <button type="submit">Get Weather</button>
+    </form>
+
+    <!-- Area for error/loading messages -->
+    <div class="message" id="message"></div>
+
+    <!-- Weather result card -->
+    <div class="weather-card" id="weatherCard">
+      <div class="weather-header">
+        <h2 id="cityName">City</h2>
+        <img id="weatherIcon" class="weather-icon" alt="Weather icon" />
+      </div>
+
+      <div class="temp" id="temperature">0°C</div>
+
+      <div class="details">
+        <div id="description">Clear sky</div>
+        <div id="extraDetails"></div>
+        <div id="tags"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
